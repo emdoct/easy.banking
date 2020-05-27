@@ -15,8 +15,8 @@ body, html {
 
 .header {
 	background-color: #ffffff;
-	padding-top: 19px;
-	padding-bottom: 18px;
+	padding: 19px 20px 20px 18px;
+	
 	position: relative;
 	z-index: 10;
 }
@@ -46,6 +46,13 @@ body, html {
 		border: none;
 		border-radius: 30px;
 		background: linear-gradient(45deg, #28d561, #25b6d3);
+		cursor: pointer;
+		outline: none;
+
+	}
+
+	.btn a {
+		outline: none;
 	}
 
 .about-block {
