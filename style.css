@@ -15,7 +15,7 @@ body, html {
 
 .header {
 	background-color: #ffffff;
-	padding: 19px 20px 20px 18px;
+	padding: 0px 20px 0px 18px;
 	
 	position: relative;
 	z-index: 10;
@@ -36,7 +36,15 @@ body, html {
 	.header-menu a {
 		color: #b2b1b6;
 		text-decoration: none;
-		padding-right: 32px;
+		margin-right: 32px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-bottom: 4px solid white;
+	}
+
+	.header-menu a:hover {
+		border-bottom: 4px solid #28d561;
+		transition: 0.5s;
 	}
 
 	.menu-toggle {
@@ -85,6 +93,13 @@ body, html {
 		background: linear-gradient(45deg, #28d561, #25b6d3);
 		cursor: pointer;
 		outline: none;
+		margin-top: 8px;
+
+	}
+
+	.btn:hover {
+		transition: 1s;
+		background: linear-gradient(45deg, #83e49f, #7ad8e4);
 
 	}
 
@@ -138,6 +153,10 @@ body, html {
 		cursor: pointer;
 		outline: none;
 
+	}
+	.about-btn:hover {
+		transition: 1s;
+		background: linear-gradient(45deg, #83e49f, #7ad8e4);
 	}
 
 	.about-btn a {
@@ -208,10 +227,21 @@ body, html {
 
 	.article h3 {
 		color: black;
+		font-size: 18px;
 	}
 
 	.article-text {
 		padding: 0 25px;
+	}
+
+	.article-text a {
+		text-decoration: none;
+		color: black;
+	}
+
+	.article-text a:hover {
+		transition: 0.3s;
+		color: #28d561;
 	}
 
 	.article-img img {
@@ -237,21 +267,35 @@ body, html {
 
 		}
 
+		.footer-btn:hover {
+			transition: 1s;
+		    background: linear-gradient(45deg, #83e49f, #7ad8e4);
+		}
+
 		.footer-btn a {
 			outline: none;
 		}
 
 		.social {
 			margin-top: 48px;
+			box-sizing: border-box;
 		}
+
+		
 
 		.social-list {
 			margin-top: 56px;
 			margin-bottom: 47px;
+			box-sizing: border-box;
 		}
 
 		.social-list img {
 			margin-right: 13px;
+		}
+
+		.social-list img:hover {
+			transition: 0.6s;
+			transform: scale(1.2);
 		}
 
 		.contacts-list {
