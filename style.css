@@ -15,7 +15,7 @@ body, html {
 
 .header {
 	background-color: #ffffff;
-	padding: 0px 20px 0px 18px;
+	padding: 11px 20px 0px 18px;
 	
 	position: relative;
 	z-index: 10;
@@ -31,6 +31,7 @@ body, html {
 	.header-menu {
 		display: flex;
 		align-items: center;
+		margin-left: 83px;
 	}
 
 	.header-menu a {
@@ -117,19 +118,21 @@ body, html {
 }	
 
 	.about-block__text {
-		flex-basis: 400px;
+		flex-basis: 416px;
 	}
 
 	.about-block__text h1 {
 		margin-top: 185px;
-		margin-bottom: 40px;
-		font-size: 40px;
+		margin-bottom: 34px;
+		font-size: 53px;
+		line-height: 57px;
 	}
 
 	.about-block__text p {
 		color: #b2b1b6;
 		line-height: 25px;
 		margin-bottom: 42px;
+		font-size: 17px;
 	}
 
 	.about-img {
@@ -167,6 +170,7 @@ body, html {
 	position: relative;
 	z-index: 1;
 	background-color: #f4f5f7;
+	padding-top: 75px;
 }
 
 	.offers-discription {
@@ -175,7 +179,11 @@ body, html {
 	}
 
 	.offer-head {
-		margin-bottom: 77px;
+		margin-bottom: 70px;
+	}
+
+	.offer-head h2 {
+		font-size: 36px;
 	}
 
 	.offer-head p{
@@ -188,7 +196,16 @@ body, html {
 	}
 
 	.offer {
-		margin-right: 25px;
+		margin-right: 33px;
+	}
+
+	.offer:nth-of-type(4) {
+		margin-right: 0px;
+	}
+
+	.offer-text h3 {
+		padding-top: 15px;
+		font-size: 23px;
 	}
 
 	.offer-text p {
@@ -293,9 +310,17 @@ body, html {
 			margin-right: 13px;
 		}
 
-		.social-list img:hover {
+		.social-list svg {
+			fill: white;
+			transition: 0.6s;
+			margin-right: 13px;
+		}
+
+		.social-list svg:hover {
 			transition: 0.6s;
 			transform: scale(1.2);
+			fill: #32c485;
+
 		}
 
 		.contacts-list {
