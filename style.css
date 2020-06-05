@@ -47,6 +47,7 @@ body, html {
 		padding-top: 20px;
 		padding-bottom: 20px;
 		border-bottom: 4px solid white;
+		scroll-behavior: smooth;
 	}
 
 	.header-menu a:hover {
@@ -62,8 +63,19 @@ body, html {
 		display: none;
 	}
 
-	.cross__burger {
+	.burger.cross span {
 		transform: rotate(50deg);
+		transition: 0.7s;
+	}
+
+	.burger.cross:before {
+		transform: scale(0);
+	}
+
+	.burger.cross:after {
+		transform: rotate(-50deg);
+		top: 5px;
+		transition: 0.7s;
 	}
 
 	.burger span {
@@ -73,6 +85,7 @@ body, html {
 		position: relative;
 		top: 9px;
 		display: block;
+		transition: 0.7s;
 		
 	}
 
@@ -83,6 +96,7 @@ body, html {
 		position: relative;
 		display: block;
 		content: " ";
+		transition: 0.2s;
 	}
 
 	.burger:after {
@@ -93,6 +107,7 @@ body, html {
 		top: 17px;
 		display: block;
 		content: " ";
+		transition: 0.7s;
 
 	}
 
