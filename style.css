@@ -6,6 +6,12 @@ body, html {
 *{
 	font-family: sans-serif;
 }
+
+.hide {
+	opacity: 0;
+	transition: 1s;
+	transform: translateY(-480px)
+}
 .fix-container {
 	display: flex;
 	justify-content: space-between;
@@ -18,7 +24,7 @@ body, html {
 	padding: 11px 20px 0px 18px;
 	
 	position: relative;
-	z-index: 10;
+	z-index: 20;
 }
 
 
@@ -56,6 +62,10 @@ body, html {
 		display: none;
 	}
 
+	.cross__burger {
+		transform: rotate(50deg);
+	}
+
 	.burger span {
 		height: 4px;
 		background-color: black;
@@ -63,14 +73,14 @@ body, html {
 		position: relative;
 		top: 9px;
 		display: block;
+		
 	}
 
-	.burger span:before {
+	.burger:before {
 		height: 4px;
 		background-color: black;
-		width:100%;
+		width: 100%;
 		position: relative;
-		bottom: 13px;
 		display: block;
 		content: " ";
 	}
@@ -78,11 +88,16 @@ body, html {
 	.burger:after {
 		height: 4px;
 		background-color: black;
-		width:100%;
+		width: 100%;
 		position: relative;
 		top: 17px;
 		display: block;
 		content: " ";
+
+	}
+
+	.mobile-menu {
+		display: none;
 	}
 
 	.btn {
@@ -112,7 +127,7 @@ body, html {
 	background-color: #fafafa;
 	background-image: url('img/bg-intro-desktop.svg');
 	background-repeat: no-repeat;
- 	background-position: 360% 67%; 
+ 	background-position: 623px 69%; 
  	padding-bottom: 175px;
  	
 }	
@@ -136,15 +151,21 @@ body, html {
 	}
 
 	.about-img {
-		position: relative;
+		position: absolute;
+	    margin: 0;
+	    left: 47%;
+	    right: 0;
+	    top: -36px;
+	    max-width: 30%;
+	    z-index: 15;
+	}
+	
+	.about-img img {
+		max-width: 760px;
+		width: 176%;
 	}
 
-	.about-img img {
-		position: absolute;
-		top: -115px;
-		right: -305px;
-		z-index: 2;
-	}
+	
 
 	.about-btn {
 		width: 165px;
@@ -388,12 +409,46 @@ body, html {
     	margin-right: 25px;
 	}
 }
+
+@media (max-width: 880px) {
+	.about-block__text h1 {
+		margin-top: 320px;
+		
+	}
+
+	.about-img  {
+	    position: absolute;
+	    margin: 0 auto;
+	    left: 0;
+	    right: 0;
+	   	top: -45px;
+    	max-width: 333px;
+	    z-index: 1;
+	    
+	}
+
+	.about-img img {
+		width: 100%;
+	}
+
+	.about-block {
+       	background-position: -188px 264%;
+  	}
+}
 	
 
 @media (max-width: 760px) {
+
+	.header-menu {
+		margin-left: 20px;
+	}
+
 	.header-menu a {
 		padding-right: 15px;
+		margin-right: 10px;
 	}
+
+
 
 	.footer-container {
 		flex-wrap: wrap;
@@ -404,7 +459,24 @@ body, html {
 	}
 }
 
+@media (max-width: 609px) {
+	.article {
+		margin-right: 0px;
+		max-width: 330px;
+		margin-top: 57px;
+	}
+}
+
 @media (max-width: 670px) {
+
+	.logo {
+		padding-bottom: 20px;
+	}
+
+	.logo img {
+		margin-top: 10px;
+		margin-left: 6px;
+	}
 	.header-menu {
 		display: none;
 	}
@@ -423,12 +495,13 @@ body, html {
 		align-items: center;
 		background-color: white;
 		position: absolute;
-		z-index: 10;
+		z-index: 5;
 		margin-top: 88px;
 		left: 5%;
 		width: 90%;
 		border-radius: 5px;
 		padding-top: 30px;
+		transition: 1s;
 
 	}
 
@@ -443,7 +516,7 @@ body, html {
 	}
 
 	.about-block__text h1 {
-		margin-top: 70px;
+		
 		font-size: 35px;
 	}
 
@@ -452,6 +525,20 @@ body, html {
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
+	.offer-head {
+		text-align: center;
+		
+	}
+
+	.offer-head h2 {
+		font-size: 30px;
+		line-height: 40px;
+		margin-bottom: 16px;
+	}
+
+
+
+
 
 	.offer {
 		margin-right: 10px;
@@ -479,7 +566,9 @@ body, html {
 
 @media (max-width: 480px) {
 	.offers {
-		justify-content: center;
+	    flex-direction: column;
+	    margin: 0;
+	    padding: 0;
 
 	}
 
@@ -498,6 +587,43 @@ body, html {
 		max-width: 260px;
 	}
 
+	.article-lists {
+		flex-direction: column;
+	}
+
+	.article-discription h2 {
+		margin-bottom: 33px;
+	}
+
+	.article {
+		margin-right: 0px;
+		max-width: 330px;
+		margin-top: 57px;
+	}
+
+	.article:nth-of-type(1) {
+		margin-top: 0px;
+	}
+
+	.article-img img {
+		margin-bottom: 22px;
+	}
+
+	.article-text {
+		font-size: 10px;
+		padding: 0 20px 0 32px;
+	}
+
+	.article-text h3 {
+		margin: 12px 0 0 0;
+
+	}
+
+	.article-text p {
+		font-size: 14px;
+		margin-top: 7px;
+	}
+
 	.contacts-list ul:nth-of-type(1) {
     	
     	padding-left: 0px;
@@ -511,33 +637,127 @@ body, html {
 	
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
 
 	.about-block {
-		padding-bottom: 50px;
+    
+    background-position: -79px -208px;
+    background-size: 173%;
+   
+}
+
+	
+
+	.about-img  {
+	    position: absolute;
+	    margin: 0 auto;
+	    left: 0;
+	    right: 0;
+	   	top: -45px;
+    	max-width: 333px;
+	    z-index: 1;
+	    
+	}
+
+	.about-img img {
+		width: 100%;
 	}
 	.about-block__text {
-	    margin-left: 32px;
+	    
 	    margin-right: 32px;
 	    font-size: 12px;
 	    text-align: center;
 	}
 
 	.about-block__text h1 {
-		font-size: 30px;
-		margin-bottom: 30px;
+		font-size: 39px;
+		margin-left: 26px;
+		margin-bottom: 0px;
+		line-height: 50px;
 	}
+
+	.about-block__text p {
+		margin-top: 11px;
+		font-size: 14px;
+		margin-bottom: 33px;
+	}
+
+	.about-btn {
+		margin-left: 10px;
+		font-size: 14px;
+	}
+
+	
+	.offer {
+		margin: 0px;
+		padding: 0px;
+	}
+	.offer-head {
+		margin-bottom: 47px;
+	}
+
+
+	.offer-head p {
+		line-height: 24px;
+	}
+
+	.offer-text h3 {
+		margin-top: 7px;
+		padding-left: 7px;
+		font-size: 20px;
+	}
+
+	.offer-text p {
+		max-width: 300px;
+		line-height: 25px;
+		letter-spacing: -1px;
+		margin-bottom: 32px;
+	}
+
+	.article-discription {
+		padding-top: 75px;
+		padding-bottom: 127px;
+
+	}
+
+	.article-discription h2 {
+		font-size: 30px;
+
+	}
+
 
 	 .footer-container {
 		flex-direction: column !important;
 		align-items: center;
 	}
 
+	.social {
+		margin-top: 40px;
+	}
+
+	.footer-logo {
+		padding-left: 23px;
+	}
+
+	.social-list {
+		margin-top: 32px;
+		margin-bottom: 0px;
+	}
+
+	.social-list svg {
+		transform: scale(1.2);
+	}
+
 
 	.contacts-list {
 	    flex-direction: column;
 	    align-items: center;
+	    margin-top: 32px;
 	 }
+
+	 .contacts-list li {
+    	margin-bottom: 16px;
+	}
 
 	 .contacts-list ul {
 	 	padding: 0;
@@ -550,10 +770,15 @@ body, html {
 	 	margin-right: 0px;
 	 }
 
+	 .footer-btn {
+	 	margin-top: 19px;
+	 }
+
 	
 
 	 .copyright {
-	 	margin: 0%;
+	 	margin: 0;
+	 	margin-bottom: 41px;
 	 }
 
 	 .copyright button {
